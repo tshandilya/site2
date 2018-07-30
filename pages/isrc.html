@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script language='javascript' async='true' type='text/javascript' src='//whatfix.com/0e12a9f0-c1be-11e6-b9ea-04013d24cf02/embed/embed.nocache.js'></script>
+</head>
+<body>
+  <style type="text/css">
+  body
+  {
+    font-family:sans-serif;
+  }
+</style>
+<h4>This is Inside first IFRAME - 1</h4>
+<p><label for="range_weight">Weight: </label> <input type="range" name="weight"  class="slider" min="0" max="100" value="75">
+  <span  class="slider_label"></span></p>
+  <iframe src="isrc2.html" style="border: 1px solid red; margin: 15px 15px 15px 15px;" height="200" width="500"></iframe>
+</body>
+<script type="text/javascript">
+  $(function()
+  {
+    $('.slider').on('input change', function(){
+      $(this).next($('.slider_label')).html(this.value);
+    });
+    $('.slider_label').each(function(){
+      var value = $(this).prev().attr('value');
+      $(this).html(value);
+    });
+
+
+  })
+</script>
+</html>
