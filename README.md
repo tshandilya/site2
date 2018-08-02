@@ -1,2 +1,2 @@
 # site2
-https://suhas-ingrainhub.github.io/site2/
+https://tshandilya.github.io/site2/
